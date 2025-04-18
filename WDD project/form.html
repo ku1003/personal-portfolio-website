@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title> Contact Me </title>
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <script>
+      window.onload=function(){
+        let n=document.getElementById("n");
+        let e=document.getElementById("e");
+        let m=document.getElementById("m");
+
+        document.getElementById("btn").addEventListener("click",function(){
+
+
+          let n1=n.value;
+        let e1=e.value;
+        let m1=m.value;
+
+
+          if(n1==""||e1==""||m1=="")
+          {
+            alert("All Fields Are Compulsory");
+          }
+          else
+          { 
+             for(let i=0; i<n1.length; i++)
+             {
+              const ch=n1[i];
+              if(!((ch>='A')&&(ch<='Z'))&&(ch>='a')&&(ch<='z'))
+             {
+              
+             }
+             else{
+              alert("Name Must Contain Only Alphabets");
+             }
+             }
+            
+          }
+          if(m1.length<10)
+          {
+            alert("Message is Too Short.");
+          }
+
+          
+        
+        })
+        
+        document.getElementById("btn").addEventListener("click",function(){
+          console.log("name:",n.value);
+            console.log("Email:",e.value);
+            console.log("Message:",m.value);
+        })
+         
+           
+
+      }
+    </script>
+<body>
+<p class="h"> Contect <e> Me!</e></p>
+<div class="form">
+  <form>
+    <div class="b">
+    <input type="text" id="n" class="a" placeholder="Your Name" required><br><br>
+    </div>
+    <div class="f">
+    <input type="email"id="e" class="a" placeholder="Your Email" required><br><br>
+    </div>
+    <div class="f">
+    <textarea placeholder="Your Message" id="m" class="a" rows="5" required></textarea>
+    </div>
+    <button class="b">reset</button>
+    <button class="b" id="btn">submit</button>
+  </form>
+</div>
+
+</body>
+</html>
+
+  
